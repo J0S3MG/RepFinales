@@ -19,12 +19,15 @@ namespace Final1
         {
             InitializeComponent();
         }
-        Alumnado a = new Alumnado();
-        string path = Application.StartupPath + "\\Facultad.dat";
+        Alumnado a = new Alumnado();//Me aseguro que exista.
+        string path = Application.StartupPath + "\\Facultad.dat";//creo la ruta para la percistencia.
+        #region Procesamos el boton Seleccion
         private void btnCrearCurso_Click(object sender, EventArgs e)
         {
+            #region Datos para el Archivo de Excepciones
             FileStream fs = null;
             StreamWriter sw = null;
+            #endregion
             string dni = txtDNI.Text;
             string legajo = txtLegajo.Text;
             try
@@ -34,34 +37,35 @@ namespace Final1
                 string esp = txtAreaEspecializacion.Text;
                 int idx = lbxCursos.SelectedIndex;
                 #endregion
-                if (rbnDocente.Checked)
-                {
+                if (rbnDocente.Checked)//Chequeo que hagan click en el Docente.
+                {   //Si hace click creo el curso con los datos del docente.
                     Curso c = a.CrearCurso(dni, nom, esp);
-                    lbxCursos.Items.Add(c);
+                    lbxCursos.Items.Add(c);//Lo agrego al lisbox.
                 }
-                else if (rbnAlumno.Checked) 
-                {
+                else if (rbnAlumno.Checked)//Chequeo que hagan click en el Alumno. 
+                {   //Si se cumple agrego el alumno al curso que seleccione.
                     a.AgregarAlumno(dni, nom, legajo, idx);
-                    Curso c = a[idx];
+                    Curso c = a[idx];//Muestro el curso al que se inscribio.
                     MessageBox.Show("Se inscribio a: "+c.VerEsp());
                 }
 
             }
-            catch (NoNumeroException n)
+            catch (NoNumeroException n)//Cacho la excepcion personalizada.
             {
-                MessageBox.Show(n.Message);
+                MessageBox.Show(n.Message);//Hago la exportacion segun me lo pide el ejercicio.
                 fs = new FileStream("Excepciones.csv",FileMode.OpenOrCreate,FileAccess.Write);
-                sw = new StreamWriter(fs);
-                string valormalo = a.ValorMalo(dni,legajo);
+                sw = new StreamWriter(fs);//Cada que ocurra una excepcion guardo los datos de la misma en el archivo.
+                string valormalo = a.ValorMalo(dni,legajo);//Me sirve para saber que dato genero la excepcion.
                 sw.WriteLine($"{n};{valormalo}");
             }
-            finally
+            finally//Cierro los recursos.
             {
                 if (sw != null) sw.Close();
                 if (fs != null) fs.Close();
             }
           
         }
+        #endregion
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -77,7 +81,6 @@ namespace Final1
                 finally
                 {
                     if(fs != null) fs.Close();
-                    if(a == null) a = new Alumnado();
                 }
                 if(a != null)
                 {
