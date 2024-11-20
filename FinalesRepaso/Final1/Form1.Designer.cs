@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCrearCurso = new System.Windows.Forms.Button();
+            this.btnCrearSeleccion = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtDNI = new System.Windows.Forms.TextBox();
             this.txtAreaEspecializacion = new System.Windows.Forms.TextBox();
@@ -37,20 +37,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnAgregarAlumno = new System.Windows.Forms.Button();
             this.lbxCursos = new System.Windows.Forms.ListBox();
-            this.btnExportarExcepciones = new System.Windows.Forms.Button();
+            this.rbnDocente = new System.Windows.Forms.RadioButton();
+            this.rbnAlumno = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
-            // btnCrearCurso
+            // btnCrearSeleccion
             // 
-            this.btnCrearCurso.Location = new System.Drawing.Point(306, 161);
-            this.btnCrearCurso.Name = "btnCrearCurso";
-            this.btnCrearCurso.Size = new System.Drawing.Size(150, 44);
-            this.btnCrearCurso.TabIndex = 0;
-            this.btnCrearCurso.Text = "Crear Curso";
-            this.btnCrearCurso.UseVisualStyleBackColor = true;
-            this.btnCrearCurso.Click += new System.EventHandler(this.btnCrearCurso_Click);
+            this.btnCrearSeleccion.Location = new System.Drawing.Point(306, 175);
+            this.btnCrearSeleccion.Name = "btnCrearSeleccion";
+            this.btnCrearSeleccion.Size = new System.Drawing.Size(150, 44);
+            this.btnCrearSeleccion.TabIndex = 0;
+            this.btnCrearSeleccion.Text = "Crear Seleccion ";
+            this.btnCrearSeleccion.UseVisualStyleBackColor = false;
+            this.btnCrearSeleccion.Click += new System.EventHandler(this.btnCrearCurso_Click);
             // 
             // txtNombre
             // 
@@ -68,14 +68,14 @@
             // 
             // txtAreaEspecializacion
             // 
-            this.txtAreaEspecializacion.Location = new System.Drawing.Point(306, 135);
+            this.txtAreaEspecializacion.Location = new System.Drawing.Point(228, 29);
             this.txtAreaEspecializacion.Name = "txtAreaEspecializacion";
             this.txtAreaEspecializacion.Size = new System.Drawing.Size(154, 20);
             this.txtAreaEspecializacion.TabIndex = 4;
             // 
             // txtLegajo
             // 
-            this.txtLegajo.Location = new System.Drawing.Point(309, 224);
+            this.txtLegajo.Location = new System.Drawing.Point(231, 72);
             this.txtLegajo.Name = "txtLegajo";
             this.txtLegajo.Size = new System.Drawing.Size(151, 20);
             this.txtLegajo.TabIndex = 5;
@@ -101,7 +101,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(303, 108);
+            this.label3.Location = new System.Drawing.Point(225, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(123, 13);
             this.label3.TabIndex = 8;
@@ -110,21 +110,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(306, 208);
+            this.label4.Location = new System.Drawing.Point(228, 52);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 13);
             this.label4.TabIndex = 9;
             this.label4.Text = "Legajo:";
-            // 
-            // btnAgregarAlumno
-            // 
-            this.btnAgregarAlumno.Location = new System.Drawing.Point(309, 250);
-            this.btnAgregarAlumno.Name = "btnAgregarAlumno";
-            this.btnAgregarAlumno.Size = new System.Drawing.Size(150, 44);
-            this.btnAgregarAlumno.TabIndex = 10;
-            this.btnAgregarAlumno.Text = "Agregar Alumno";
-            this.btnAgregarAlumno.UseVisualStyleBackColor = true;
-            this.btnAgregarAlumno.Click += new System.EventHandler(this.btnAgregarAlumno_Click);
             // 
             // lbxCursos
             // 
@@ -134,23 +124,36 @@
             this.lbxCursos.Size = new System.Drawing.Size(288, 186);
             this.lbxCursos.TabIndex = 11;
             // 
-            // btnExportarExcepciones
+            // rbnDocente
             // 
-            this.btnExportarExcepciones.Location = new System.Drawing.Point(68, 315);
-            this.btnExportarExcepciones.Name = "btnExportarExcepciones";
-            this.btnExportarExcepciones.Size = new System.Drawing.Size(117, 44);
-            this.btnExportarExcepciones.TabIndex = 12;
-            this.btnExportarExcepciones.Text = "Exportar Excepciones";
-            this.btnExportarExcepciones.UseVisualStyleBackColor = true;
+            this.rbnDocente.AutoSize = true;
+            this.rbnDocente.Location = new System.Drawing.Point(309, 118);
+            this.rbnDocente.Name = "rbnDocente";
+            this.rbnDocente.Size = new System.Drawing.Size(66, 17);
+            this.rbnDocente.TabIndex = 13;
+            this.rbnDocente.TabStop = true;
+            this.rbnDocente.Text = "Docente";
+            this.rbnDocente.UseVisualStyleBackColor = true;
+            // 
+            // rbnAlumno
+            // 
+            this.rbnAlumno.AutoSize = true;
+            this.rbnAlumno.Location = new System.Drawing.Point(309, 141);
+            this.rbnAlumno.Name = "rbnAlumno";
+            this.rbnAlumno.Size = new System.Drawing.Size(60, 17);
+            this.rbnAlumno.TabIndex = 14;
+            this.rbnAlumno.TabStop = true;
+            this.rbnAlumno.Text = "Alumno";
+            this.rbnAlumno.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(471, 450);
-            this.Controls.Add(this.btnExportarExcepciones);
+            this.ClientSize = new System.Drawing.Size(471, 312);
+            this.Controls.Add(this.rbnAlumno);
+            this.Controls.Add(this.rbnDocente);
             this.Controls.Add(this.lbxCursos);
-            this.Controls.Add(this.btnAgregarAlumno);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -159,9 +162,11 @@
             this.Controls.Add(this.txtAreaEspecializacion);
             this.Controls.Add(this.txtDNI);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.btnCrearCurso);
+            this.Controls.Add(this.btnCrearSeleccion);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,7 +174,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnCrearCurso;
+        private System.Windows.Forms.Button btnCrearSeleccion;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtDNI;
         private System.Windows.Forms.TextBox txtAreaEspecializacion;
@@ -178,9 +183,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnAgregarAlumno;
         private System.Windows.Forms.ListBox lbxCursos;
-        private System.Windows.Forms.Button btnExportarExcepciones;
+        private System.Windows.Forms.RadioButton rbnDocente;
+        private System.Windows.Forms.RadioButton rbnAlumno;
     }
 }
 

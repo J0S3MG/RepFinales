@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Final1.Models
 {
+    [Serializable]
     public abstract class Persona
     {
         private int dni;
@@ -15,7 +16,8 @@ namespace Final1.Models
         public Persona(string d,string n) 
         {
             this.nom = n;
-            if(Regex.Match(d,"^d/$").Success == false) 
+            string patron = @"^\d{8}$";
+            if (Regex.Match(d,patron).Success == false) 
             {
                throw new NoNumeroException();   
             }

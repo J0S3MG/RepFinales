@@ -7,13 +7,15 @@ using System.Threading.Tasks;
 
 namespace Final1.Models
 {
+    [Serializable]
     public class Alumno: Persona
     {
         private int legajo;
 
         public Alumno(string legajo,string nom,string dni) : base(dni, nom)
         {
-            if (Regex.Match(legajo, "^d/$").Success == false)
+            string p = @"^\d{5}$";
+            if (Regex.Match(legajo,p).Success == false)
             {
                 throw new NoNumeroException();
             }

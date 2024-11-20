@@ -1,0 +1,6 @@
+Final1.Models.NoNumeroException: dio error
+   en Final1.Models.Persona..ctor(String d, String n) en C:\Users\Alumno\source\repos\RepFinales\FinalesRepaso\Final1\Models\Persona.cs:línea 22
+   en Final1.Models.Docente..ctor(String dni, String nom, String ae) en C:\Users\Alumno\source\repos\RepFinales\FinalesRepaso\Final1\Models\Docente.cs:línea 14
+   en Final1.Models.Curso..ctor(String dni, String nom, String esp) en C:\Users\Alumno\source\repos\RepFinales\FinalesRepaso\Final1\Models\Curso.cs:línea 13
+   en Final1.Models.Alumnado.CrearCurso(String dni, String nom, String esp) en C:\Users\Alumno\source\repos\RepFinales\FinalesRepaso\Final1\Models\Alumnado.cs:línea 34
+   en Final1.Form1.btnCrearCurso_Click(Object sender, EventArgs e) en C:\Users\Alumno\source\repos\RepFinales\FinalesRepaso\Final1\Form1.cs:línea 39;dsgfsa

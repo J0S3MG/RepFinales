@@ -1,0 +1,10 @@
+C:\Users\Alumno\source\repos\RepFinales\FinalesRepaso\Final1\bin\Debug\Final1.exe.config
+C:\Users\Alumno\source\repos\RepFinales\FinalesRepaso\Final1\bin\Debug\Final1.exe
+C:\Users\Alumno\source\repos\RepFinales\FinalesRepaso\Final1\bin\Debug\Final1.pdb
+C:\Users\Alumno\source\repos\RepFinales\FinalesRepaso\Final1\obj\Debug\Final1.csproj.AssemblyReference.cache
+C:\Users\Alumno\source\repos\RepFinales\FinalesRepaso\Final1\obj\Debug\Final1.Form1.resources
+C:\Users\Alumno\source\repos\RepFinales\FinalesRepaso\Final1\obj\Debug\Final1.Properties.Resources.resources
+C:\Users\Alumno\source\repos\RepFinales\FinalesRepaso\Final1\obj\Debug\Final1.csproj.GenerateResource.cache
+C:\Users\Alumno\source\repos\RepFinales\FinalesRepaso\Final1\obj\Debug\Final1.csproj.CoreCompileInputs.cache
+C:\Users\Alumno\source\repos\RepFinales\FinalesRepaso\Final1\obj\Debug\Final1.exe
+C:\Users\Alumno\source\repos\RepFinales\FinalesRepaso\Final1\obj\Debug\Final1.pdb
